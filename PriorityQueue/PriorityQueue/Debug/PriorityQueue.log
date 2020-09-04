@@ -1,0 +1,5 @@
+﻿  main.c
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(14,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(17,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(12,20): warning C4101: 'minLoc' :참조되지 않은 지역 변수입니다.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(81,28): error C2088: '>=': struct에 맞지 않습니다.
