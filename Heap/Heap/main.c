@@ -1,85 +1,190 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-struct Element {
-	int key;
-}typedef Element;
+// # 힙생성 알고리즘 
+// # 힙 정렬 전에 최대 힙 구조를 만들어 주는 과정
+// ---------------------------------------------------------
+// 문제 1
 
-struct HeapType {
-	Element heap[100];
-	int heapSize;
-}typedef HeapType;
+//int H[100];
+//int n = 0;
+//
+//void swapElement(int *p, int *q) {
+//	int tmp;
+//	tmp = *q;
+//	*q = *p;
+//	*p = tmp;
+//}
+//
+//void upHeap(int i) {
+//
+//	
+//	if (i == 1) {
+//		return;
+//	}
+//
+//	if (H[i / 2] > H[i]) {
+//		return;
+//	}
+//
+//	swapElement(&H[i / 2], &H[i]);
+//	upHeap(i / 2);
+//}
+//
+//void downHeap(int i) {
+//
+//	int biggerIndex;
+//
+//	if (i * 2 > n) {
+//		return;
+//	}
+//
+//	biggerIndex = i * 2;
+//
+//	if (i * 2 + 1 <= n) {
+//		if (H[biggerIndex] < H[i * 2 + 1]) 
+//			biggerIndex = i * 2 + 1;	
+//	}
+//
+//	if (H[i] < H[biggerIndex]) {
+//		swapElement(&H[i], &H[biggerIndex]);
+//	}
+//
+//	downHeap(biggerIndex);
+//	
+//}
+//
+//void insertItem(int key) {
+//	n++;
+//	H[n] = key;
+//	upHeap(n);
+//	printf("0\n");
+//}
+//
+//void removeMax() {
+//
+//	printf("%d\n", H[1]);
+//	H[1] = H[n];
+//	n--;
+//	downHeap(1);
+//}
+//
+//void printHeap() {
+//
+//	for (int i = 1; i <= n; i++) {
+//		printf(" %d", H[i]);
+//	}
+//	printf("\n");
+//}
+//int main() {
+//
+//	int key;
+//	char operation;
+//
+//	
+//	while (1) {
+//
+//		scanf("%c", &operation);
+//
+//
+//		if (operation == 'i') {
+//			scanf("%d", &key);
+//			insertItem(key);
+//		}
+//		else if (operation == 'd') {
+//			removeMax(key);
+//		}
+//
+//		else if (operation == 'p') {
+//			printHeap(key);
+//		}
+//
+//		else if (operation == 'q') {
+//			break;
+//		}
+//
+//		getchar();
+//
+//	}
+//
+//}
 
-void insertMaxHeap(HeapType* heapType, Element element) {
+// ----------------------------------------------
+// 문제2번 > 재귀방식을 oj에 업로드
 
-	int i;
-	i = ++(heapType->heapSize);
+int H[100];
+int n = 0;
 
-	while (i > 0 && element.key > heapType->heap[i / 2].key) {
-		heapType->heap[i] = heapType->heap[i / 2];
-		i = i / 2;
+void swapElement(int *p, int *q) {
+	int tmp;
+	tmp = *q;
+	*q = *p;
+	*p = tmp;
+
+}
+
+void downHeap(int i) {
+
+	int biggerIndex;
+
+	if (i * 2 > n) {
+		return;
 	}
 
-	heapType->heap[i] = element;
-}
+	biggerIndex = i * 2;
 
-Element deleteMaxHeap(HeapType* heapType) {
-
-	Element maxElement = heapType->heap[1];
-	heapType->heap[1] = heapType->heap[(heapType->heapSize)--];
-	Element element = heapType->heap[1];
-
-	int i = 1;
-
-	while (2 * i <= heapType->heapSize) {
-
-		if (2 * i + 1 <= heapType->heapSize) {
-			if (element.key > heapType->heap[2 * i].key && element.key > heapType->heap[2 * i + 1].key)
-				break;
-			else {
-				if (heapType->heap[2 * i].key >= heapType->heap[2 * i + 1].key) {
-					heapType->heap[i] = heapType->heap[2 * i];
-					i = i * 2;
-				}
-				else {
-					heapType->heap[i] = heapType->heap[2 * i + 1];
-					i = i * 2 + 1;
-				}
-			}
-		}
-		else {
-			if (element.key <= heapType->heap[2 * i].key) {
-				heapType->heap[i] = heapType->heap[2 * i];
-				i = i * 2;
-			}
-		}
-
+	if (i * 2 + 1 <= n) {
+		if (H[biggerIndex] < H[i * 2 + 1]) 
+			biggerIndex = i * 2 + 1;	
 	}
-	heapType->heap[i] = element;
 
-	return maxElement;
+	if (H[i] < H[biggerIndex]) {
+		swapElement(&H[i], &H[biggerIndex]);
+	}
+
+	downHeap(biggerIndex);
 }
 
-Element* createElement(int key) {
-	Element* element = (Element*)malloc(sizeof(Element));
-	element->key = key;
-	return element;
+
+void rBuildHeap(int i) {
+
+	if (i > n) {
+		return;
+	}
+
+	rBuildHeap(2 * i);
+	rBuildHeap(2 * i + 1);
+	downHeap(i);
 }
 
-HeapType* createHeap() {
-	int N;
-	HeapType* heap = (HeapType*)malloc(sizeof(HeapType));
-	scanf("%d", &N);
-	heap->heapSize = N;
-	for (int i = 1; i <= heap->heapSize; i++) {
-		scanf("%d", &N);
-		insertMaxHeap(heap, *createElement(N));
+void buildHeap() {
+	for (int i = n / 2; i >= 1; i++) {
+		downHeap(i);
 	}
 }
 
-void printHeap(HeapType* heap) {
-	for (int i = 1; i <= heap->heapSize; i++) {
-		printf(" %d", heap->heap[i].key);
+void printHeap() {
+
+	for (int i = 1; i <= n; i++) {
+		printf(" %d", H[i]);
 	}
+	printf("\n");
+
 }
+
+
+int main() {
+
+	scanf("%d", &n);
+	for (int i = 1; i <= n; i++) {
+		scanf("%d", &H[i]);
+	}
+	rBuildHeap(1);
+	printHeap();
+
+}
+
+// ----------------------------------------------
+// # 제자리 힙 정렬 구현
+// # 만들어진 힙 구조를 가지고 배열을 정렬하는 과정
 

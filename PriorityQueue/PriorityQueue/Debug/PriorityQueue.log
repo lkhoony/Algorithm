@@ -1,5 +1,6 @@
 ﻿  main.c
-C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(14,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(17,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(12,20): warning C4101: 'minLoc' :참조되지 않은 지역 변수입니다.
-C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(81,28): error C2088: '>=': struct에 맞지 않습니다.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(79,18): warning C4244: '함수': 'time_t'에서 'unsigned int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(84,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(126,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\PriorityQueue\PriorityQueue\main.c(171,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  PriorityQueue.vcxproj -> C:\Study_and_Project\4-2\Algorithm\PriorityQueue\Debug\PriorityQueue.exe

@@ -3,7 +3,166 @@
 #include <stdio.h>
 #include <string.h>
 
-// # 1
+/*
+* // -----------------------------------------------------------------
+// # 1. 실습시간 풀이
+
+struct Node {
+	char elem;
+	struct Node* prev;
+	struct Node* next;
+}typedef Node;
+
+struct List {
+	struct Node* header;
+	struct Node* trailer;
+	int nodeNum;
+}typedef List;
+
+Node* createNode(char elem) {
+
+	Node* newNode = (Node*)malloc(sizeof(Node));
+	newNode->elem = elem;
+	newNode->prev = NULL;
+	newNode->next = NULL;
+
+	return newNode;
+}
+
+List* initList() {
+
+	List* list = (List*)malloc(sizeof(List));
+	list->header = createNode(0);
+	list->trailer = createNode(0);
+	list->nodeNum = 0;
+	list->header->next = list->trailer;
+	list->trailer->prev = list->header;
+
+	return list;
+}
+
+void add(List* list, int r, char e) {
+
+	Node* node = list->header;
+
+	if (r<0 || r>(list->nodeNum) + 1) {
+		printf("invalid position\n");
+	}
+	else {
+
+		for (int i = 0; i < r; i++) node = node->next;
+		Node* newNode = createNode(e);
+		newNode->prev = node->prev;
+		newNode->next = node;
+		newNode->prev->next = newNode;
+		newNode->next->prev = newNode;
+
+		(list->nodeNum)++;
+	}
+}
+
+void delete(List* list, int r) {
+
+	Node* node = list->header;
+
+	if (r<0 || r>list->nodeNum) {
+		printf("invalid position\n");
+	}
+
+	else {
+
+		for (int i = 0; i < r; i++) node = node->next;
+
+		node->prev->next = node->next;
+		node->next->prev = node->prev;
+		free(node);
+		(list->nodeNum)--;
+
+	}
+
+}
+void get(List* list, int r) {
+
+	Node* node = list->header;
+
+	if (r<0 || r>list->nodeNum) {
+		printf("invalid position\n");
+	}
+
+	else {
+
+		for (int i = 0; i < r; i++) node = node->next;
+
+		printf("%c\n", node->elem);
+	}
+}
+
+void print(List* list) {
+
+	Node* node = list->header;
+
+	while (node->next) {
+		node = node->next;
+		printf("%c", node->elem);
+	}
+
+	printf("\n");
+}
+
+void freeNode(Node* node) {
+
+	if (node) {
+		freeNode(node->next);
+		free(node);
+	}
+}
+
+void freeList(List* list) {
+	freeNode(list->header);
+	free(list);
+}
+
+void doOperate(List* list) {
+
+	int N, r;
+	char operate, e;
+	scanf("%d", &N);
+	getchar();
+
+	for (int i = 0; i < N; i++) {
+
+		scanf("%c", &operate);
+
+		if (operate == 'A') {
+			scanf("%d %c", &r, &e);
+			add(list, r, e);
+		}
+		else if (operate == 'D') {
+			scanf("%d", &r);
+			delete(list, r);
+		}
+		else if (operate == 'G') {
+			scanf("%d", &r);
+			get(list, r);
+		}
+		else if (operate == 'P') {
+			print(list);
+		}
+
+		getchar();
+	}
+
+	freeList(list);
+}
+
+int main()
+{
+	doOperate(initList());
+
+}
+*/
+// -----------------------------------------------------------------
+// # 1. 복습풀이
 /*
 struct Node{
 	char e;
@@ -159,6 +318,7 @@ P
 G 3
 */
 
+/*
 struct Node {
 	struct Node* left;
 	struct Node* right;
@@ -272,7 +432,7 @@ int main() {
 	orderTree(tree);
 	freeTree(tree);
 }
-
+*/
 /*
 9
 5 3 9
