@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #define _CRT_SECURE_NO_WARNINGS
 
 /*
@@ -183,7 +184,78 @@ int main() {
 
 }
 
+
 */
+
+/* 
+* -------------------------------------------------
+* 2-2. merge sort 배열로 구현하였을 때
+* 
+void merge(int* A, int l, int m, int r) {
+
+	int i = l, k = l;
+	int j = m + 1;
+	int B[100] = { 0 };
+
+	while (i <= m && j <= r) {
+		if (A[i] <= A[j]) B[k++] = A[i++];
+		else B[k++] = A[j++];
+	}
+
+	while (i <= m) {
+		B[k++] = A[i++];
+	}
+
+	while (j <= r) {
+		B[k++] = A[j++];
+	}
+
+	for (int k = l; k <= r; k++) {
+		A[k] = B[k];
+	}
+}
+
+void rMergeSort(int* A, int l, int r) {
+
+	int m;
+
+	if (l < r) {
+		m = (l + r) / 2;
+		rMergeSort(A, l, m);
+		rMergeSort(A, m + 1, r);
+		merge(A, l, m, r);
+	}
+
+	return;
+}
+
+
+void mergeSort(int* A, int N) {
+	
+	rMergeSort(A, 0, N - 1);
+
+}
+
+int main() {
+
+	int N;
+	int intArr[100] = { 0 };
+
+	scanf("%d", &N);
+
+	for (int i = 0; i < N; i++) {
+		scanf("%d", intArr + i);
+	}
+
+	mergeSort(intArr, N);
+
+	for (int i = 0; i < N; i++) {
+		printf(" %d", *(intArr + i));
+	}
+}
+
+*/
+
 
 /*
 // * ------------------------------------------------------------------------
@@ -331,6 +403,8 @@ int main() {
 
 
 // # 2.2 퀵정렬 중복값 고려
+
+/*
 struct Partition {
 	int a;
 	int b;
@@ -464,3 +538,5 @@ int main() {
 
 	free(list);
 }
+
+*/
