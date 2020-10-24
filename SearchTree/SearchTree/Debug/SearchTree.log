@@ -1,0 +1,2 @@
+﻿main.obj : error LNK2019: _search_searchTree 함수에서 참조되는 확인할 수 없는 외부 기호
+C:\Study_and_Project\4-2\Algorithm\SearchTree\Debug\SearchTree.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.

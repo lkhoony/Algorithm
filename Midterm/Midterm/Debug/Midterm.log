@@ -1,0 +1,9 @@
+﻿  main.c
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(307,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(318,12): warning C4101: 'partition' :참조되지 않은 지역 변수입니다.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(360,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(367,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(370,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(372,2): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Midterm\Midterm\main.c(345): warning C4716: 'inPlacePartition': 값을 반환해야 합니다.
+  Midterm.vcxproj -> C:\Study_and_Project\4-2\Algorithm\Midterm\Debug\Midterm.exe
