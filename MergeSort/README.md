@@ -83,4 +83,25 @@ Alg merge(L1, L2)
 
 ```
 
-### 2.2. 합병 정렬에서의 분할 통치법
+### 2.2. 합병 정렬 과정
+
+#### 2.2.1 실행 예를 위한 입력 리스트
+![image](https://user-images.githubusercontent.com/66773320/97070522-f2e1b500-1613-11eb-8b62-c32be94a2c52.png)
+
+초기 분할
+![image](https://user-images.githubusercontent.com/66773320/97070533-00973a80-1614-11eb-87be-20a71b2f57ca.png)
+
+분할
+![image](https://user-images.githubusercontent.com/66773320/97070539-0f7ded00-1614-11eb-8e2e-b3df0b43d50e.png)
+
+베이스 케이스
+![image](https://user-images.githubusercontent.com/66773320/97070547-1a388200-1614-11eb-9c47-0f745fee94b2.png)
+
+합병
+![image](https://user-images.githubusercontent.com/66773320/97070562-2d4b5200-1614-11eb-8188-49a1977ef3d3.png)
+
+재귀호출, 합병
+![image](https://user-images.githubusercontent.com/66773320/97070570-3fc58b80-1614-11eb-9208-ca09eaa58fd2.png)
+
+합병
+![image](https://user-images.githubusercontent.com/66773320/97070571-47853000-1614-11eb-8607-dcc0db7203bc.png)
