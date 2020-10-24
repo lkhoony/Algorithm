@@ -4,4 +4,4 @@
 
 > - __[1 주차](./PriorityQueue/README.md)__ | __우선순위 큐__
 > - __[2 주차](./Heap/README.md)__ | __힙과 힙정렬__
-> - __[3 주차](./Merge/README.md)__ | __합병정렬 퀵정렬__
+> - __[3 주차](./MergeSort/README.md)__ | __합병정렬 퀵정렬__
