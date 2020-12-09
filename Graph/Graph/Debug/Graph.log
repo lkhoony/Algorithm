@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Study_and_Project\4-2\Algorithm\Graph\Graph\main.c(759,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Graph\Graph\main.c(762,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Graph\Graph\main.c(766,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\Graph\Graph\main.c(459): warning C4716: 'initGraph': 값을 반환해야 합니다.
+  Graph.vcxproj -> C:\Study_and_Project\4-2\Algorithm\Graph\Debug\Graph.exe

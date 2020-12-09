@@ -1,0 +1,6 @@
+﻿  main.c
+C:\Study_and_Project\4-2\Algorithm\HashTable\HashTable\main.c(334,2): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\HashTable\HashTable\main.c(342,3): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\HashTable\HashTable\main.c(345,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Study_and_Project\4-2\Algorithm\HashTable\HashTable\main.c(350,4): warning C4996: 'scanf': This function or variable may be unsafe. Consider using scanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  HashTable.vcxproj -> C:\Study_and_Project\4-2\Algorithm\HashTable\Debug\HashTable.exe
