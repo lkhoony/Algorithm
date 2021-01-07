@@ -85,23 +85,57 @@ Alg merge(L1, L2)
 
 ### 2.2. 합병 정렬 과정
 
-#### 2.2.1 실행 예를 위한 입력 리스트
+#### 2.2.1. 실행 예를 위한 입력 리스트
+
+- 크기(k)가 8인 연결리스트를 입력
+
 ![image](https://user-images.githubusercontent.com/66773320/97070522-f2e1b500-1613-11eb-8b62-c32be94a2c52.png)
 
-초기 분할
+#### 2.2.2. 초기 분할
+
+- mergeSort()함수 호출
+
+- 연결리스트의 크기를 k/2로 분할 (partition 함수)
+
+- 각각이 L1, L2가 됨
+
 ![image](https://user-images.githubusercontent.com/66773320/97070533-00973a80-1614-11eb-87be-20a71b2f57ca.png)
 
-분할
+#### 2.2.3. 분할
+
+- 다시 L1에 대해서 mergeSort 함수를 사용하여 이를 다시 L1, L2로 분할
+
+- 계속해서 partition해서 크기가 1일때 까지 재귀적으로 분할
+
 ![image](https://user-images.githubusercontent.com/66773320/97070539-0f7ded00-1614-11eb-8e2e-b3df0b43d50e.png)
 
-베이스 케이스
+#### 2.2.4. 베이스 케이스
+
+- 크기가 1일때 까지 재귀적으로 분할
+
 ![image](https://user-images.githubusercontent.com/66773320/97070547-1a388200-1614-11eb-9c47-0f745fee94b2.png)
 
-합병
+#### 2.2.5. 합병
+
+- 크기가 1인 분할된 리스트들을 합병(merge)
+
 ![image](https://user-images.githubusercontent.com/66773320/97070562-2d4b5200-1614-11eb-8188-49a1977ef3d3.png)
 
-재귀호출, 합병
 ![image](https://user-images.githubusercontent.com/66773320/97070570-3fc58b80-1614-11eb-9208-ca09eaa58fd2.png)
 
-합병
 ![image](https://user-images.githubusercontent.com/66773320/97070571-47853000-1614-11eb-8607-dcc0db7203bc.png)
+
+
+### 2.3. 합병 정렬 분석
+
+- 합병 정렬 트리의 높이
+
+	- 합병 정렬 트리의 높이(h) : O(logN)
+
+		- 각 재귀 호출(mergeSort)에서 리스트를 절반으로 나누기 때문
+		
+- 깊이 i의 노드들에서 이루어지는 총 작업량 : O(N)
+
+	- 각 갚이에서 모든 노드들에 대해서 합병하는 과정(merge)을 거침
+	
+- 따라서 전체 실행시간은 O(N*logN)
